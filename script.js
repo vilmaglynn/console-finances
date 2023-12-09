@@ -102,3 +102,60 @@ let finances = [
 	total += finances[i][1];
   }
   console.log(`Total: ${total}`)
+
+
+//================================
+//Average change
+//================================
+
+// Initialize an array to store the differences
+let differences = [];
+
+// Iterate through the array starting from the second element
+for (let i = 1; i < finances.length; i++) {
+  // Calculate the difference between the current and previous elements
+  let currentDifference = [finances[i][0],parseInt(finances[i][1] - finances[i - 1][1])];
+  // Push the difference to the array
+  differences.push(currentDifference);
+}
+
+// Add all differences
+let totalDifference = 0;
+for (let j = 0; j < differences.length; j++) {
+  totalDifference += differences[j][1];
+}
+// Calculate the average difference
+let averageDifference = parseFloat(totalDifference / (finances.length - 1)).toFixed(2);
+console.log(`Average Change: ${averageDifference}`)
+
+//================================
+// Greatest Increase in Profits/Losses
+//================================
+// Assume the first number is the max initially
+let maxNumber = differences[0][1];
+
+// Iterate through the array using a for loop
+for (let i = 1; i < differences.length; i++) {
+  // Compare the current number with the max
+  if (differences[i][1] > maxNumber) {
+    maxNumber = differences[i][1];
+  }
+}
+// Display the maximum number
+console.log(`Greatest Increase in Profits/Losses: ($ ${maxNumber})`)
+
+//================================
+// Greatest Decrease in Profits/Losses
+//================================
+// Assume the first number is the min initially
+let minNumber = differences[0][1];
+
+// Iterate through the array using a for loop
+for (let i = 1; i < differences.length; i++) {
+  // Compare the current number with the min
+  if (differences[i][1] < minNumber) {
+    minNumber = differences[i][1];
+  }
+}
+// Display the min number
+console.log(`Greatest Decrease in Profits/Losses: ($ ${minNumber})`)

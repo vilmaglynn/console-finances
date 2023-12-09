@@ -87,12 +87,16 @@ let finances = [
 	['Feb-2017', 671099],
   ];
   
+  let btntitle =document.getElementById("btn-title")
+  let financialResults =document.getElementById("financialResults")
+
+  function financialAnalysis() {
   console.log("Financial Analysis ")
   console.log("--------------------")
   //================================
   // Total Months
   //================================
-  console.log(`Total Months: ${finances.length}`)
+  console.log(`Total Months: $${finances.length}`)
   
   //================================
   //Total
@@ -159,3 +163,8 @@ for (let i = 1; i < differences.length; i++) {
 }
 // Display the min number
 console.log(`Greatest Decrease in Profits/Losses: ($ ${minNumber})`)
+
+financialResults.innerHTML = (`Total Months: ${finances.length} <br>Total: $${total}<br>Average Change: ${averageDifference}<br> Greatest Increase in Profits/Losses: ($ ${maxNumber})<br> Greatest Decrease in Profits/Losses: ($ ${minNumber})`)
+}
+
+btntitle.addEventListener("click", financialAnalysis)

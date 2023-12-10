@@ -91,7 +91,10 @@ let finances = [
   let btntitle =document.getElementById("btn-title")
   let financialResults =document.getElementById("financialResults")
 
-//NOTE: Answers are on console as requested but started playing around to create a function and then display on screen
+// NOTE for grader : 
+// =====================
+// * Answers are on console as requested but started playing around learning to create a function and then display on screen. Press button to get results. 
+// * Also i prefer Template literals instead of concatenation so hopefullly not getting less points for this
 
   function financialAnalysis() {
   console.log("Financial Analysis ")

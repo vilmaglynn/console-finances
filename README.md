@@ -12,7 +12,7 @@ Here we learn to use javascript 'for loops' to calculate total amounts, average 
 
 
 ## Usage
-
+Link to deployed page****
 https://vilmaglynn.github.io/console-finances/
 
 

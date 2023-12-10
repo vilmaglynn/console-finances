@@ -91,7 +91,8 @@ let finances = [
   let btntitle =document.getElementById("btn-title")
   let financialResults =document.getElementById("financialResults")
 
-//Answer are on console as requested but started playing around to create a function and then display on screen
+//NOTE: Answers are on console as requested but started playing around to create a function and then display on screen
+
   function financialAnalysis() {
   console.log("Financial Analysis ")
   console.log("--------------------")
